@@ -37,7 +37,7 @@ int main(int argc,char** argv){
     cv::drawMatches(I1,keypoint1,I2,keypoint2,matches,img_matches);
 
     // Show result
-    cv::namedWindow("Matches",cv::WINDOW_NORMAL);
+    cv::namedWindow("Matches",cv::WINDOW_AUTOSIZE);
     cv::imshow("Matches",img_matches);
     cv::waitKey(0);
     return 0;
