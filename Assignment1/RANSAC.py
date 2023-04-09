@@ -45,6 +45,7 @@ for _ in range(iterations):
             control=True
             break
     
+    # if the number of inliers excceed the THRESHOLD, terminate
     if(control):
         break
 
