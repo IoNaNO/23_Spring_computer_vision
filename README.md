@@ -24,3 +24,9 @@ The OpenCV version I used: 3.4.19-dev
         g++ -std=c++11 ORB.cpp -o orb_matching.o `pkg-config --cflags --libs opencv4`
         ./orb_matching.o mysse11.bmp mysse22.bmp
         ```
+2. Assignment2
+    - BEV
+        ```bash
+        g++ -std=c++11 BEV.cpp -o bev.o `pkg-config --cflags --libs opencv4`
+        ./bev.o
+        ```
