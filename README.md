@@ -6,6 +6,10 @@ TJU SSE 2023 Spring CV Assignments
 └─Assignment1
     │  1953921_Assignment1.md
     │  1953921_Assignment1.pdf
+    │  
+└─Assignment2
+    │  1953921_Assignment2.md
+    │  1953921_Assignment2.pdf
 ```
 ## How to run the code
 The OpenCV version I used: 3.4.19-dev
