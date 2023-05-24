@@ -127,3 +127,40 @@ n_1n_2n_3(\alpha-\frac{2\gamma}{\theta})+(1-n_1^2)\frac{\alpha}{\theta}+n_1^2\be
 n_1n_3^2(\alpha-\frac{2\gamma}{\theta})-n_1\alpha&n_2n_3^2(\alpha-\frac{2\gamma}{\theta})-n_2\alpha&n_3(1-n_3^2)(\alpha-\frac{2\gamma}{\theta})
 \end{bmatrix}
 $$
+
+## 4
+
+![image-20230524211059852](.assets/image-20230524211059852.png)
+
+![image-20230524211112127](.assets/image-20230524211112127.png)
+
+### Where is my submisson
+
+1. the intrinsic parameters of my camera
+
+In the file `camera_intrinsic.txt`，here is the content
+
+```txt
+Camera Matrix:
+[1658.360919958824, 0, 1210.66914163179;
+ 0, 1626.412676277487, 556.1001190421206;
+ 0, 0, 1]
+Distortion Coefficients:
+[-0.2582572766295772, 1.287844698344425, 0, 0, -0.8617458966204036]
+```
+
+2. the original image of the physical planes taken by my camera
+
+In the file `input.jpg`
+
+![intput](./input.jpg)
+
+3. the generated BEV image
+
+In the file `result.jpg`
+
+![result](./result.jpg)
+
+
+
+And the source code is in file `BEV.cpp`
