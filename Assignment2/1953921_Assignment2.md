@@ -48,6 +48,18 @@ $$
 \begin{matrix}
 1+k_1(x^2+3y^2)+k_2(x^4+6x^2y^2+5y^4)+\\ 2\rho_2x+6\rho_1y+k_3(x^6+9x^4y^2+15x^2y^4+7y^6)
 \end{matrix}
+\end{bmatrix}\\=
+\begin{bmatrix}
+\begin{matrix}
+1+k_1(2x^2+r^2)+k_2r^2(4x^2+r^2)+\\2\rho_1y+6\rho_2x+k_3r^4(6x^2+r^2)
+\end{matrix}
+&
+2k_1xy+4k_2xyr^2+2\rho_1x+2\rho_2y+6k_3xyr^4 \\
+2k_1xy+4k_2xyr^2+2\rho_1x+2\rho_2y+6k_3xyr^4
+&
+\begin{matrix}
+1+k_1(2y^2+r^2)+k_2r^2(4x^2+r^2)+\\2\rho_2x+6\rho_1y+k_3r^4(6y^2+r^2)
+\end{matrix}
 \end{bmatrix}
 $$
 
