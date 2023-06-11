@@ -1,23 +1,25 @@
 <template>
-  <el-config-provider namespace="ep">
-    <BaseHeader />
-    <div style="display: flex">
-      <BaseSide />
-      <div>
-        <img alt="Vue logo" class="element-plus-logo" src="./assets/logo.png" />
-        <HelloWorld msg="Hello Vue 3.0 + Element Plus + Vite" />
-      </div>
+  <div class="flex main-container" style="height: 100%; margin: 0;">
+    <Header />
+    <div class="flex-1 overflow-auto">
+      <router-view />
     </div>
-  </el-config-provider>
+    <Footer />
+  </div>
 </template>
 
 <style>
 #app {
   text-align: center;
-  color: var(--ep-text-color-primary);
+  overflow: hidden;
+  flex-direction: column;
+  height: 100%;
+  /* max-height: max-content; */
 }
-
-.element-plus-logo {
+.main-container {
+  height: calc(100vh - var(--ep-menu-item-height) - 3px);
+}
+/* .element-plus-logo {
   width: 50%;
-}
+} */
 </style>
