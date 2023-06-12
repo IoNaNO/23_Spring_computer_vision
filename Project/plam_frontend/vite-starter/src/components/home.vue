@@ -2,7 +2,7 @@
 import { ref } from "vue";
 import {Notify} from '@nutui/nutui';
 import axios from "axios";
-// defineProps<{ msg: string }>();
+
 const hasresult=ref(false);
 const haserr=ref(false);
 const result=ref("");
@@ -18,10 +18,10 @@ const hand_recognize=async()=>{
         Notify.primary(navigator.camera);
     }
     try {
-        // 确保 Cordova 已经加载
+            // Make sure Cordova is ready
         if (window.cordova) {
             const options = {
-                quality: 50,
+                quality: 25,
                 destinationType: Camera.DestinationType.DATA_URL,
                 sourceType: Camera.PictureSourceType.CAMERA,
                 encodingType: Camera.EncodingType.JPEG,
@@ -100,11 +100,11 @@ const hand_recognize=async()=>{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 250px; /* 设置容器高度为视窗高度，使得图片可以在垂直方向上居中 */
+  height: 180px; 
 }
 
 .centered-image {
-  height: 200px; /* 设置图片高度 */
-  object-fit: contain; /* 保持图片比例 */
+  height: 150px; 
+  object-fit: contain; 
 }
 </style>

@@ -19,7 +19,7 @@ import 'vant/lib/index.css'
 import "element-plus/theme-chalk/src/message.scss";
 
 axios.defaults.baseURL='https://124.70.41.167:5000';
-axios.defaults.timeout=15000;
+axios.defaults.timeout=45000;
 const app = createApp(App);
 // app.use(ElementPlus);
 app.use(router).use(NutUI).use(Tag);

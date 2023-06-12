@@ -4,12 +4,11 @@ import { Notify } from '@nutui/nutui'
 import console from "console";
 import axios from "axios";
 
-// defineProps<{ msg: string }>();
 const left_images = ref([]);
 const right_images = ref([]);
 const isloading = ref(false);
 
-const picnum = 4;
+const picnum = 2;
 const username = ref("");
 const left_cnt = ref(0);
 const right_cnt = ref(0);
@@ -25,10 +24,10 @@ const left_cam = async () => {
         Notify.primary(navigator.camera);
     }
     try {
-        // 确保 Cordova 已经加载
+        // Make sure Cordova is ready
         if (window.cordova) {
             const options = {
-                quality: 50,
+                quality: 25,
                 destinationType: Camera.DestinationType.DATA_URL,
                 sourceType: Camera.PictureSourceType.CAMERA,
                 encodingType: Camera.EncodingType.JPEG,
@@ -39,10 +38,10 @@ const left_cam = async () => {
                     navigator.camera.getPicture(resolve, reject, options);
                 });
             }
-            // get result by camera
+            // Get result by camera
             for (let i = 0; i < num; i++) {
                 const imageData = await takePicture(options);
-                left_images.value.push('data:image/jpeg;base64,'+imageData);
+                left_images.value.push('data:image/jpeg;base64,'+imageData);    // base64header is necessary
                 left_cnt.value++;
             }
         } else {
@@ -63,10 +62,10 @@ const right_cam = async () => {
         Notify.primary(navigator.camera);
     }
     try {
-        // 确保 Cordova 已经加载
+            // Make sure Cordova is ready
         if (window.cordova) {
             const options = {
-                quality: 50,
+                quality: 25,
                 destinationType: Camera.DestinationType.DATA_URL,
                 sourceType: Camera.PictureSourceType.CAMERA,
                 encodingType: Camera.EncodingType.JPEG,
@@ -178,7 +177,6 @@ const register = () => {
     justify-content: center;
     align-items: center;
     height: 250px;
-    /* 设置容器高度为视窗高度，使得图片可以在垂直方向上居中 */
 }
 
 .tag {
@@ -187,9 +185,8 @@ const register = () => {
 
 .centered-image {
     height: 200px;
-    /* 设置图片高度 */
     object-fit: contain;
-    /* 保持图片比例 */
+
 }
 
 .inputbox {
